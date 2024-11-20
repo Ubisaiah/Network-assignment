@@ -1,0 +1,114 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f7a203, #0a53e5);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+/* Container for the whole page */
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgb(209, 69, 38);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+/* Header Styling */
+h1 {
+    color: black;
+    font-size: 36px;
+    margin-bottom: 40px;
+    animation: slideIn 1.2s ease-out;
+}
+/* Menu Styling */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+}
+/* Remove any default list styling if there are <ul> or <ol> tags */
+ul, ol {
+    list-style: none;
+    padding-left: 0;
+}
+/* Buttons for options */
+.menu button {
+    background: linear-gradient(135deg, #00DBDE, #FC00FF);
+    color: white;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    opacity: 0;  /* Start invisible */
+}
+/* Cascading sliding-in animation for buttons */
+.menu button:nth-child(1) {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.5s; /* Delay for first button */
+}
+.menu button:nth-child(2) {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 1s; /* Delay for second button */
+}
+.menu button:nth-child(3) {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 1.5s; /* Delay for third button */
+}
+.menu button:nth-child(4) {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 2s; /* Delay for fourth button */
+}
+.menu button:nth-child(5) {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 2.5s; /* Delay for fifth button */
+}
+.menu button:nth-child(6) {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 3s; /* Delay for sixth button */
+}
+.menu button:nth-child(7) {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 3.5s; /* Delay for seventh button */
+}
+/* Button Hover Effect */
+.menu button:hover {
+    background: rgb(24, 20, 20);
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.menu button:active {
+    transform: scale(0.98);
+}
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes slideIn {
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-100%); } /* Start off-screen to the left */
+    100% { opacity: 1; transform: translateX(0); } /* Slide in to original position */
+}
